@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import profileImg from "/src/assets/images/profile.webp";
+import profileImg from "/src/assets/images/profile.jpg";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Heading from "../ui/Heading";
@@ -57,21 +57,21 @@ export default function About() {
               A brief intro, who am I?
             </h3>
             <p ref={body} className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0">
-              I am an independent frontend developer, UI/UX designer and creator based in
-              Melbourne, Australia.
+              Jaydatt is a dedicated Web developer, UI/UX designer based in
+              India.
               <br></br>
-              <br></br>I specialize in crafting elevated, intuitive, and
-              minimalistic designs for startups and small businesses to help
-              them stand out in the digital landscape with a powerful impact. 😎
+              <br></br>I have a strong foundation in JavaScript, NodeJS and MERN, constantly
+              advancing in Web Development and Web3 technologies. Currently pursuing B.Tech in 
+              Computer Science, combines academic knowledge with real-world experience. 😎
               <br></br>
               <br></br>
-              When I am not developing or designing, I enjoy creating videos
-              that talk about frontend development, productivity and design on{" "}
+              When I am not developing or designing, I enjoy going to GYM to focus on fitness while 
+              keeping up with the latest technologies.{" "}
               <a
                 className="underline duration-300 ease-in-out hover:text-secondary-700"
                 href="https://www.youtube.com/channel/UCBOAB9RV647G93GxLhEXleA"
               >
-                YouTube 📸
+                LinkedIn
               </a>
             </p>
           </div>

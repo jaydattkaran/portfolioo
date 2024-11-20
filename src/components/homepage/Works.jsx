@@ -20,11 +20,11 @@ export default function Works({ forwardedRef }) {
           <Projects
             link="https://musical-stroopwafel-1c2327.netlify.app/landing.html"
             img={ibgroup}
-            alt="IBGroup vietnam website mockup"
-            name="ibgroup vietnam website"
+            alt="revamped parker.com"
+            name="revamped parker.com"
             type="Web Design • Frontend Development"
-            year="2023"
-            tools="HTML • TailwindCSS • JavaScript • Figma"
+            year="2024"
+            tools="HTML • TailwindCSS • JavaScript • GSAP"
 
           />
         </div>
@@ -33,21 +33,21 @@ export default function Works({ forwardedRef }) {
           <Projects
             link="https://mementostudio.netlify.app/"
             img={memento}
-            alt="memento landing page mockup"
-            name="memento studio landing page"
-            type="Frontend Development"
-            year="2023"
-            tools="HTML • TailwindCSS • JavaScript"
+            alt="revamped subway.com"
+            name="revamped subway.com"
+            type="Web Design • Frontend Development"
+            year="2024"
+            tools="HTML • TailwindCSS • JavaScript • GSAP"
           />
         </div>
         <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
           <Projects
             link="https://realbusinessaccountants.netlify.app"
             img={acc}
-            alt="real business accountant project mockup"
-            name="real business accountants"
+            alt="musicova"
+            name="musicova"
             type="Web Design • Frontend Development"
-            year="2023"
+            year="2024"
             tools="HTML • CSS • JavaScript • Figma"
           />
         </div>
@@ -55,22 +55,22 @@ export default function Works({ forwardedRef }) {
           <Projects
             link="https://godaddyuiclone.netlify.app"
             img={daddy}
-            alt="godaddy clone page mockup"
-            name="GODADDY LANDING PAGE CLONE"
+            alt="Weather-forecast"
+            name="Weather-forecast"
             type="Frontend Development"
-            year="2023"
-            tools="HTML • TailwindCSS • JavaScript"
+            year="2024"
+            tools="HTML • CSS • JavaScript"
           />
         </div>
         <div className="col-span-1 h-fit md:col-span-4">
         <Projects
             link="https://sunnysidechallenge.netlify.app"
             img={sunnyside}
-            alt="sunnyside project mockup"
-            name="SUNNYSIDE LANDING PAGE"
+            alt="qr generator"
+            name="qr generator"
             type="Frontend Development"
             year="2022"
-            tools="HTML • TailwindCSS • JavaScript"
+            tools="HTML • CSS • JavaScript"
           />
          
         </div>

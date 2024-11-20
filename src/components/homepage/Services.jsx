@@ -4,31 +4,30 @@ import Heading from "../ui/Heading";
 export default function Services() {
   const expertiseItems = [
     "Web Development",
+    "Web3",
     "Web Design",
-    "Wireframing",
     "UI/UX Design",
-    "Branding",
   ];
 
   const toolBoxItems = [
+    "MERN",
     "JavaScript",
-    "HTML",
-    "CSS",
-    "Figma",
-    "Webflow",
+    "NodeJS",
+    "Git/Github",
     "GSAP",
     "TailwindCSS",
-    "ReactJS",
+    "ShadCN",
+    "Figma",
   ];
 
   return (
     <section id="services" className="my-[10%]" aria-label="services">
-      <Heading title="services" />
+      <Heading title="Experties" />
       <div className="space-y-14">
         <ServiceUi
-          title="my expertises."
+          title="my experties."
           description="I focus on all things design and web related. With each of my
-          services, my goal is to deliver an impactful and elevating
+          experties, my goal is to build an impactful and elevating
           digital experience for everyone."
           items={expertiseItems}
         />

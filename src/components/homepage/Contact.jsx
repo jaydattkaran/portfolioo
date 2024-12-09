@@ -14,7 +14,7 @@ export default function Contact() {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: contactSection.current,
-      start:"180px bottom",
+      start: "180px bottom",
 
       // markers: true,
       animation: gsap
@@ -40,8 +40,8 @@ export default function Contact() {
       className="my-[10%] overflow-hidden"
       aria-label="contact me"
     >
-      
-      
+
+
       <Heading title="Contact" />
       <div ref={contactSection} className="mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12">
         <div className="col-span-4">
@@ -53,23 +53,23 @@ export default function Contact() {
           </p>
           <form
             name="contact"
-            action="/contact"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScSx2KPsnNrwR0fSdkUIr688XdkHNi3CI2nvUUE7QxEvbM_uw/formResponse"
             autoComplete="off"
             // eslint-disable-next-line react/no-unknown-property
             className="mt-10 font-grotesk"
-            method="POST" 
+            method="POST"
           >
-            <input type="hidden" name="form-name" value="contact"/>
+            <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
-                  <input
-                    required
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
-                    placeholder=" "
-                  />
+                <input
+                  required
+                  type="text"
+                  id="name"
+                  name="entry.761286444"
+                  className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
+                  placeholder=" "
+                />
                 <label
                   htmlFor="name"
                   className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
@@ -81,7 +81,7 @@ export default function Contact() {
                 <input
                   required
                   type="text"
-                  name="email"
+                  name="entry.706664016"
                   id="email"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
@@ -97,7 +97,7 @@ export default function Contact() {
                 <textarea
                   required
                   id="message"
-                  name="message"
+                  name="entry.481771621"
                   rows="5"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
@@ -136,7 +136,7 @@ export default function Contact() {
                 <span>karanjaydatt03@gmail.com</span>
                 <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
-             
+
             </div>
           </div>
           <div className="space-y-3 ">

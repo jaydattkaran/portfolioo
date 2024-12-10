@@ -28,7 +28,7 @@ export default function ParticlesCanvas() {
                 this.pos = { x, y };
                 this.vel = { x: Math.random() * 40 - 20, y: Math.random() * 40 - 20 };
                 this.size = particleSize;
-                this.color = "rgba(0, 0, 0, 0.4)";
+                this.color = "rgba(23, 29, 27, 0.2)";
             }
             update() {
                 this.pos.x += this.vel.x * deltaTime;

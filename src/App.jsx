@@ -60,6 +60,13 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
+
+      {/* <ParticleSystem/>
+      <div className="header">
+        <p>Is your big idea ready to go wild?</p>
+        <h1>Let's work together!</h1>
+        <button>Let's talk</button>
+      </div> */}
     </div>
   );
 };

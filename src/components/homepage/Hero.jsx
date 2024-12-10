@@ -1,80 +1,61 @@
+import ParticlesCanvas from "./ParticleCanvas";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { useRef, useEffect } from "react";
-import heroImg from "/src/assets/images/heroimg.webp";
+import WebFont from 'webfontloader';
+{/* <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+</style> */}
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Hero() {
-  const img = useRef(null);
-  const imgContainer = useRef(null);
-  const titles = useRef([]);
-  const scrollLine = useRef(null);
-  const scroll = useRef(null)
+
+  const cta = useRef(null);
+  const tl = gsap.timeline();
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1 });
-    tl.from(scrollLine.current, {
-      translateX: -40,
-      duration: 1.5,
-      ease: "power4.inOut",
+    WebFont.load({
+      families: ['Caveat'],
+      display: 'swap'
+    });
+
+    ScrollTrigger.create({
+      animation: gsap
+        .timeline()
+        .to(cta.current, { backgroundColor: "#D1D1C7", color: "#0E0E0C" }, 0)
+        .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0),
+
+      toggleActions: "restart reverse restart reverse",
     });
   }, []);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-
-    tl.from(imgContainer.current, {
-      scale: 1.3,
-      duration: 3.25,
-      ease: "power3.inOut",
-    })
-      .from(
-        img.current,
-        { scale: 2, duration: 3.2, ease: "power4.inOut" },
-        "-=3.1"
-      )
-      .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5")
-      .from(scroll.current, {opacity: 0, duration: 1, ease:"out"}, "-=2")
-  }, []);
-
   return (
-    <section id="hero" className="hero relative flex w-full h-screen select-none items-center justify-center" aria-label="hero">
-      <div className="z-10 flex flex-col  w-full items-center text-title 2xl:text-[9vw] 2xl:space-y-10 font-bold  uppercase text-accent-300">
-        <div className="title 2xl:py-10">
-          {/* Learn more about useRef */}
-          <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-96 overflow-visible">
-            Hey, I&apos;m Jay
-          </h1>
-        </div>
-        <div className=" title 2xl:py-10">
-        <h1 ref={(el) => (titles.current[1] = el)} className="translate-y-96 font-outline-3 md:font-outline-4 text-transparent overflow-visible">
-            Hey, I&apos;m Jay
-          </h1>
-        </div>
-        <div className=" title 2xl:py-10">
-          <h1 ref={(el) => (titles.current[2] = el)} className="translate-y-96">
-            Hey, I&apos;m Jay
-          </h1>
-        </div>
+    <div className="z-0 relative w-full h-screen flex items-center justify-center bg-secondary-100 overflow-hidden">
+      {/* Particle Background */}
+      <ParticlesCanvas />
+
+      {/* Hero Content */}
+      <div className="relative z-10 text-center">
+        <p className="text-black uppercase text-[1.5rem] font-semibold ">
+          -- Hello, I'm Jaydatt 👋
+        </p>
+        <h1 className="text-black text-[4rem] md:text-[10rem] lg:text-[10rem] font-bold leading-tight mb-6">
+          Digital Designer <br /> Creative Developer
+        </h1>
+        <p style={{fontFamily:'Caveat'}} className="text-black text-[1.5rem] font-medium mb-6">
+          A digital designer and creative developer from India passionate about creating memorable experiences.
+        </p>
+        <a
+          ref={cta}
+          className="button group relative hover:bg-transparent"
+          href="#contact"
+        >
+          <span className="relative w-fit">
+            <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
+            <span>Let&apos;s Talk.</span>
+          </span>
+        </a>
       </div>
-      <div
-        ref={imgContainer}
-        className="absolute mx-auto  w-[55%] overflow-hidden rounded-md"
-      >
-        <img
-          ref={img}
-          className=" scale-110 aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
-          src={heroImg}
-          alt="Abstract cubic background image."
-        />
-      </div>
-      <div ref={scroll} className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
-        <span className=" rotate-90 text-body-3">scroll</span>
-        <div className="relative h-1 w-10 rotate-90 overflow-hidden">
-          <span
-            ref={scrollLine}
-            className="absolute h-[0.08em] w-10 translate-x-10 bg-accent-300"
-          ></span>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

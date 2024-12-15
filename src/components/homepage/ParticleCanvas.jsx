@@ -18,7 +18,7 @@ export default function ParticlesCanvas() {
         // Particle variables
         const particles = [];
         const particleCount = 250;
-        const particleSize = 12;
+        const particleSize = 3;
         const spacing = particleSize * 12;
         const gravity = { x: 0, y: 2.2 };
         const deltaTime = 1 / 60;

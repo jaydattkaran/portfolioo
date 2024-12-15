@@ -17,8 +17,8 @@ export default function ParticlesCanvas() {
 
         // Particle variables
         const particles = [];
-        const particleCount = 250;
-        const particleSize = 12;
+        const particleCount = 100;
+        const particleSize = 3;
         const spacing = particleSize * 12;
         const gravity = { x: 0, y: 2.2 };
         const deltaTime = 1 / 60;
@@ -28,7 +28,8 @@ export default function ParticlesCanvas() {
                 this.pos = { x, y };
                 this.vel = { x: Math.random() * 40 - 20, y: Math.random() * 40 - 20 };
                 this.size = particleSize;
-                this.color = "rgba(23, 29, 27, 0.2)";
+                this.color = "rgba(23, 29, 27, 0.5)";
+                this.boxShadow = "0 0 50px rgb(29, 29, 27)";
             }
             update() {
                 this.pos.x += this.vel.x * deltaTime;

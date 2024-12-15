@@ -37,7 +37,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 text-center">
         <p className="text-black uppercase text-[1.5rem] font-semibold ">
-          -- Hello, I'm Jaydatt 👋
+          -- Hell0, I'm Jaydatt 👋
         </p>
         <h1 className="text-black text-[4rem] md:text-[10rem] lg:text-[10rem] font-bold leading-tight mb-6">
           Digital Designer <br /> Creative Developer
